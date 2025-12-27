@@ -1,0 +1,60 @@
+
+<!DOCTYPE html><html lang="en"><head>
+<title>VELSCI Business | Smarter Business Operations</title>
+<meta name="description" content="All‑in‑one business & POS SaaS platform">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        primary: '#0B1F33',
+        accent: '#1ECAD3'
+      }
+    }
+  }
+}
+</script>
+
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+
+<header class="bg-white dark:bg-gray-800 shadow">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<img src="assets/images/logo.svg" class="h-8" alt="VELSCI">
+<nav class="space-x-6">
+<a href="features.html">Features</a>
+<a href="solutions.html">Solutions</a>
+<a href="pricing.html">Pricing</a>
+<a href="contact.html" class="bg-accent text-white px-4 py-2 rounded">Get Demo</a>
+<button onclick="document.documentElement.classList.toggle('dark')">🌙</button>
+</nav>
+</div></header>
+
+<section class="max-w-7xl mx-auto px-6 py-24 text-center">
+<h1 class="text-4xl font-bold mb-6">Run Your Business. We Handle the Complexity.</h1>
+<p class="text-lg mb-8">VELSCI unifies POS, inventory, billing, and analytics in one modern platform.</p>
+<a href="contact.html" class="bg-accent text-white px-8 py-4 rounded-lg font-semibold">Book Free Demo</a>
+</section>
+
+<div id="cookieBanner" class="hidden fixed bottom-0 w-full bg-primary text-white p-4 flex justify-between">
+<span>We use cookies to improve your experience.</span>
+<button id="acceptCookies" class="bg-accent px-4 py-2 rounded">Accept</button>
+</div>
+
+<footer class="text-center py-6 text-sm">© 2025 VELSCI</footer>
+<script>
+document.getElementById('acceptCookies')?.addEventListener('click', () => {
+  localStorage.setItem('cookiesAccepted', 'true');
+  document.getElementById('cookieBanner').style.display = 'none';
+});
+window.onload = () => {
+  if (!localStorage.getItem('cookiesAccepted')) {
+    document.getElementById('cookieBanner').style.display = 'block';
+  }
+}
+</script>
+</body></html>
